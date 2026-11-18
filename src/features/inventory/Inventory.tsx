@@ -116,7 +116,7 @@ export default function Inventory() {
   };
 
   return (
-    <div className="p-4 space-y-6">
+    <div className="p-4 space-y-6 pb-16">
       <header>
         <h1 className="text-2xl font-bold text-text">Inventario</h1>
         <p className="text-textMuted mt-1">Gestiona tus materiales e implementos</p>

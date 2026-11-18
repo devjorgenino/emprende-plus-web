@@ -166,7 +166,7 @@ export default function Settings() {
   }
 
   return (
-    <div className="p-4 space-y-6">
+    <div className="p-4 space-y-6 pb-16">
       <header>
         <h1 className="text-2xl font-bold text-text">Configuración</h1>
         <p className="text-textMuted mt-1">Ajustes y mantenimiento</p>

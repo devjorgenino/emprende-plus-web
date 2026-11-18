@@ -94,7 +94,7 @@ export default function Services() {
   };
 
   return (
-    <div className="p-4 space-y-4">
+    <div className="p-4 space-y-4 pb-16">
       <header>
         <h1 className="text-2xl font-bold text-text">Servicios</h1>
         <p className="text-textSecondary mt-1">Gestiona tus servicios</p>
@@ -129,7 +129,7 @@ export default function Services() {
           </p>
         </Card>
       ) : (
-        <div className="space-y-3 pb-24">
+        <div className="space-y-3 pb-16">
           {filteredServices.map((service) => (
             <Card key={service.id} className="flex items-center justify-between">
               <div>

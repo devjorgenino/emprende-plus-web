@@ -85,7 +85,7 @@ export default function ExpenseDetail() {
 
   if (!expense) {
     return (
-      <div className="p-4 space-y-4">
+      <div className="p-4 space-y-4 pb-16">
         <Link to="/egresos">
           <Button variant="ghost" className="gap-2">
             <ArrowLeft className="w-4 h-4" />
@@ -109,7 +109,7 @@ export default function ExpenseDetail() {
   }
 
   return (
-    <div className="p-4 space-y-6">
+    <div className="p-4 space-y-6 pb-16">
       <header className="flex items-center justify-between">
         <Link to="/egresos">
           <Button variant="ghost" className="gap-2">

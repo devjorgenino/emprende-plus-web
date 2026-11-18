@@ -61,7 +61,7 @@ export default function Layout({ children }: LayoutProps) {
         </button>
       </header>
 
-      <main id="main-content" className="pb-80 md:pb-4 pt-4" role="main">{children}</main>
+      <main id="main-content" className="pb-14 md:pb-4 pt-4 min-h-screen" style={{ paddingBottom: 'max(3.5rem, calc(2.75rem + env(safe-area-inset-bottom)))' }} role="main">{children}</main>
 
       <NavBar />
 

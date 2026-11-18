@@ -82,7 +82,7 @@ export default function SaleDetail() {
 
   if (!sale && !isLoading) {
     return (
-      <div className="p-4 space-y-4">
+      <div className="p-4 space-y-4 pb-16">
         <Link to="/ventas">
           <Button variant="ghost" className="gap-2">
             <ArrowLeft className="w-4 h-4" />
@@ -106,7 +106,7 @@ export default function SaleDetail() {
   }
 
   return (
-    <div className="p-4 space-y-6">
+    <div className="p-4 space-y-6 pb-16">
       <header className="flex items-center justify-between">
         <Link to="/ventas">
           <Button variant="ghost" className="gap-2">
