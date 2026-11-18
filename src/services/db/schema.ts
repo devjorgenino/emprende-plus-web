@@ -1,4 +1,4 @@
-import { type Service, type Quote, type Sale, type InventoryItem, type Expense, type Client, type ExchangeRate } from './types';
+import { type Service, type Quote, type Sale, type InventoryItem, type Expense, type Client, type ExchangeRate } from '@/types';
 
 export interface ServiceEntity extends Service {}
 export interface QuoteEntity extends Quote {}

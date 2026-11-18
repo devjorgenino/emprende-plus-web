@@ -1,4 +1,4 @@
-import { type Sale } from './types';
+import { type Sale } from '@/types';
 
 export function exportSalesToCSV(sales: Sale[]): string {
   const headers = [

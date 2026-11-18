@@ -7,7 +7,7 @@ import { Modal } from '@/components/ui/Modal';
 import { useServiceStore } from '@/store/service.store';
 import { useRateStore } from '@/store/rate.store';
 import { formatCurrency, formatRate } from '@/utils/format';
-import { ArrowLeft, Edit, Trash2, Star, Check, X, Copy } from 'lucide-react';
+import { ArrowLeft, Edit, Trash2, Star, Check, X, Copy, DollarSign } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,6 +20,11 @@ const serviceSchema = z.object({
   priceUSD: z
     .number({ required_error: 'El precio es obligatorio' })
     .positive('El precio debe ser positivo'),
+}).refine(data => {
+  // priceUSD será calculado por el servicio
+  return true;
+}, {
+  message: 'El precio debe ser un número válido',
 });
 
 type ServiceFormData = z.infer<typeof serviceSchema>;
@@ -54,6 +59,10 @@ export default function ServiceDetail() {
         description: service.description || '',
         priceUSD: service.priceUSD,
       });
+    } else {
+      // Una vez que el componente se monta, si service aún es undefined,
+      // esperamos a que el efecto lo actualice desde el almacén.
+      // No se necesita lógica adicional aquí.
     }
   }, [service, reset]);
 
@@ -285,6 +294,3 @@ export default function ServiceDetail() {
     </div>
   );
 }
-
-// Import missing icons
-import { DollarSign } from 'lucide-react';

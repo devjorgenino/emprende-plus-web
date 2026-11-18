@@ -6,7 +6,7 @@ interface SelectOption {
 }
 
 interface SelectProps
-  extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size' | 'id'> {
+  extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
   label?: string;
   error?: string;
   icon?: ReactNode;

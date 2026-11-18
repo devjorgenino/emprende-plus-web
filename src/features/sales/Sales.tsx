@@ -188,7 +188,7 @@ export default function Sales() {
                 <span>CSV</span>
               </Button>
             )}
-            <Button variant="ghost" onClick={handleRefresh} title="Actualizar" className="shrink-0">
+            <Button variant="ghost" onClick={handleRefresh} className="shrink-0">
               <RefreshCw className="w-4 h-4" />
             </Button>
           </div>

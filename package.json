@@ -25,6 +25,7 @@
   "author": "Emprende+ Team",
   "license": "MIT",
   "dependencies": {
+    "@vercel/node": "^32.0.0",
     "date-fns": "^4.4.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^4.2.1",

@@ -1,7 +1,7 @@
 import { type ReactNode, forwardRef, useId } from 'react';
 
 interface InputProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'id'> {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   label?: string;
   error?: string;
   icon?: ReactNode;
