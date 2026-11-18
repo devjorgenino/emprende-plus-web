@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { useExpenseStore, type CreateExpenseInput } from '@/store/expense.store';
 import { formatCurrency, formatDate, formatRate } from '@/utils/format';
-import { ArrowLeft, Edit, Trash2, FileDown, DollarSign, CreditCard, Calendar, Package, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, Edit, Trash2, FileDown, DollarSign, CreditCard, Calendar, Package, AlertTriangle, Download } from 'lucide-react';
 import { toast } from 'sonner';
 import { type Expense } from '@/types';
 

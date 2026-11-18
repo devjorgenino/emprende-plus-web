@@ -41,7 +41,7 @@ export function NavBar() {
                     : 'text-textMuted hover:text-text hover:bg-surface/50'
                 }`
               }
-              aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
+              aria-current="page"
             >
               <Icon className="w-5 h-5" aria-hidden="true" />
               <span className="text-xs font-medium">{item.name}</span>
