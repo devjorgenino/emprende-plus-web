@@ -40,23 +40,23 @@ export function setRate(rate: number, source: 'bcv' | 'manual' = 'bcv', provider
   localStorage.setItem(CACHE_KEY, JSON.stringify(entry));
 }
 
-// Proxy endpoints (configured in vite.config.ts to avoid CORS)
+// Production endpoints for Vercel deployment
 const APIS = [
   {
     name: 'DolarFlow',
-    url: '/api/dolarflow/api/oficial/',
+    url: '/api/dolarflow/rate.json',
     priority: 1, // Primary source
     extract: (data: any): RateWithTimestamp | null => {
-      if (typeof data?.precio === 'number' && data.precio > 0) {
-        const timestamp = data.fechaActualizacion ? new Date(data.fechaActualizacion).getTime() : Date.now();
-        return { rate: data.precio, timestamp, source: 'DolarFlow' };
+      if (typeof data?.USD === 'number' && data.USD > 0) {
+        const timestamp = data.updated_at ? new Date(data.updated_at).getTime() : Date.now();
+        return { rate: data.USD, timestamp, source: 'DolarFlow' };
       }
       return null;
     },
   },
   {
     name: 'BCV Today',
-    url: '/api/bcv/api/v1/rate.json',
+    url: '/api/bcv/rate.json',
     priority: 2,
     extract: (data: any): RateWithTimestamp | null => {
       if (typeof data?.USD === 'number' && data.USD > 0) {
@@ -68,12 +68,12 @@ const APIS = [
   },
   {
     name: 'Dolar API',
-    url: '/api/dolarapi/v1/dolares/oficial',
+    url: '/api/dolarapi/rate.json',
     priority: 3,
     extract: (data: any): RateWithTimestamp | null => {
-      if (typeof data?.promedio === 'number' && data.promedio > 0) {
-        const timestamp = data.fechaActualizacion ? new Date(data.fechaActualizacion).getTime() : Date.now();
-        return { rate: data.promedio, timestamp, source: 'Dolar API' };
+      if (typeof data?.USD === 'number' && data.USD > 0) {
+        const timestamp = data.updated_at ? new Date(data.updated_at).getTime() : Date.now();
+        return { rate: data.USD, timestamp, source: 'Dolar API' };
       }
       return null;
     },
