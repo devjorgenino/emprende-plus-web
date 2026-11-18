@@ -1,0 +1,51 @@
+export const strings = {
+  app: {
+    name: 'Emprende+',
+    tagline: 'Gestión de emprendimiento creativo',
+  },
+  navigation: {
+    home: 'Inicio',
+    services: 'Servicios',
+    calculator: 'Calculadora',
+    sales: 'Ventas',
+    inventory: 'Inventario',
+    dashboard: 'Dashboard',
+  },
+  forms: {
+    createService: 'Crear Servicio',
+    editService: 'Editar Servicio',
+    serviceName: 'Nombre del Servicio',
+    serviceDescription: 'Descripción (opcional)',
+    priceUSD: 'Precio en USD',
+  },
+  payment: {
+    usdCASH: 'Efectivo USD',
+    vesCash: 'Efectivo VES',
+    pagoMovil: 'Pago Móvil',
+    kontigo: 'Kontigo',
+    binance: 'Binance',
+    transferVes: 'Transferencia VES',
+    other: 'Otro',
+  },
+  inventory: {
+    name: 'Nombre',
+    category: 'Categoría',
+    quantity: 'Cantidad',
+    unit: 'Unidad',
+    purchasePriceUSD: 'Precio de Compra (USD)',
+    supplier: 'Proveedor',
+    purchaseDate: 'Fecha de Compra',
+    notes: 'Notas',
+  },
+  errors: {
+    serviceNotFound: 'Servicio no encontrado',
+    itemNotFound: 'Item no encontrado',
+    invalidPrice: 'Precio inválido',
+    loadError: 'Error al cargar datos',
+  },
+  success: {
+    serviceCreated: 'Servicio creado exitosamente',
+    serviceUpdated: 'Servicio actualizado',
+    serviceDeleted: 'Servicio eliminado',
+  },
+};
